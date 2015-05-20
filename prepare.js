@@ -16,7 +16,7 @@ var packageDefinitionFile = process.cwd() + '/' +
 
 Packages.fromFile(packageDefinitionFile, function (error, packages) {
   // Fail gracefully.
-  if (error) return console.log('Unable to load ' + packageDefinitionFile);
+  if (error) return console.log('Unable to load ' + packageDefinitionFile + 'error ' + error);
 
   var done = _.after(2, function () {
     process.exit();
